@@ -16,52 +16,54 @@ MonoBehaviour:
   projectJsonFile: {fileID: 4900000, guid: 4b73e0fbaedc706428263206b5fd0f4e, type: 3}
   userAPIKey: 
   projectHash: 
+  locale: 
+  fallbackLocales: 0
   <Project>k__BackingField:
     <name>k__BackingField: Unity Visual Novel Example
-    <boards>k__BackingField:
-    - rid: 8697050508967542784
-    - rid: 8697050508967542785
+    <Boards>k__BackingField:
+    - rid: 8697050622712348734
+    - rid: 8697050622712348735
     <components>k__BackingField:
-    - rid: 8697050508967542786
-    - rid: 8697050508967542787
-    - rid: 8697050508967542788
-    - rid: 8697050508967542789
-    - rid: 8697050508967542790
-    - rid: 8697050508967542791
+    - rid: 8697050622712348736
+    - rid: 8697050622712348737
+    - rid: 8697050622712348738
+    - rid: 8697050622712348739
+    - rid: 8697050622712348740
+    - rid: 8697050622712348741
     <Variables>k__BackingField: []
     _startingElementId: cb35db92-3c07-41bf-9c45-580ad6b891b4
   references:
     version: 2
     RefIds:
-    - rid: 8697050508967542784
+    - rid: 8697050622712348734
       type: {class: Board, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 630fdb8a-48d6-473e-9974-2460f7eb2b41
         <Name>k__BackingField: Main Board
         <Nodes>k__BackingField:
-        - rid: 8697050508967542792
-        - rid: 8697050508967542793
-        - rid: 8697050508967542794
-        - rid: 8697050508967542795
-        - rid: 8697050508967542796
-        - rid: 8697050508967542797
-        - rid: 8697050508967542798
-        - rid: 8697050508967542799
-        - rid: 8697050508967542800
-        - rid: 8697050508967542801
-        - rid: 8697050508967542802
-        - rid: 8697050508967542803
-        - rid: 8697050508967542804
-        - rid: 8697050508967542805
-        - rid: 8697050508967542806
-        - rid: 8697050508967542807
-        - rid: 8697050508967542808
-        - rid: 8697050508967542809
-        - rid: 8697050508967542810
-        - rid: 8697050508967542811
-        - rid: 8697050508967542812
-        - rid: 8697050508967542813
-        - rid: 8697050508967542814
+        - rid: 8697050622712348742
+        - rid: 8697050622712348743
+        - rid: 8697050622712348744
+        - rid: 8697050622712348745
+        - rid: 8697050622712348746
+        - rid: 8697050622712348747
+        - rid: 8697050622712348748
+        - rid: 8697050622712348749
+        - rid: 8697050622712348750
+        - rid: 8697050622712348751
+        - rid: 8697050622712348752
+        - rid: 8697050622712348753
+        - rid: 8697050622712348754
+        - rid: 8697050622712348755
+        - rid: 8697050622712348756
+        - rid: 8697050622712348757
+        - rid: 8697050622712348758
+        - rid: 8697050622712348759
+        - rid: 8697050622712348760
+        - rid: 8697050622712348761
+        - rid: 8697050622712348762
+        - rid: 8697050622712348763
+        - rid: 8697050622712348764
         <Notes>k__BackingField:
         - <Pos>k__BackingField: {x: 5840, y: 11360}
           <RawContent>k__BackingField: "<p>To begin, press the <strong>Play (\u25B6\uFE0F)</strong>
@@ -178,7 +180,7 @@ MonoBehaviour:
             rel="noopener noreferrer nofollow" href="https://docs.arcweave.com/project-items/attributes">attributes</a>,
             but let's leave this for another tutorial).</p>
           <ColorTheme>k__BackingField: pink
-    - rid: 8697050508967542785
+    - rid: 8697050622712348735
       type: {class: Board, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: b924f43d-3c3c-4769-b9c2-34a7a5c8da49
@@ -191,7 +193,7 @@ MonoBehaviour:
             Credits</strong><br>Bg music by <a target="_blank" rel="noopener noreferrer
             nofollow" href="https://authorseo.itch.io/visual-love-bgm-all-in-one-pack">AuthorSeo</a></p>
           <ColorTheme>k__BackingField: pink
-    - rid: 8697050508967542786
+    - rid: 8697050622712348736
       type: {class: Component, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 1f4389b8-e21a-4d12-84c7-c36cc0c50345
@@ -200,7 +202,7 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: alex_smile.png
-    - rid: 8697050508967542787
+    - rid: 8697050622712348737
       type: {class: Component, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 5e87633a-d1f5-40bf-b084-c5220a15ad97
@@ -209,7 +211,7 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: jake_smile.png
-    - rid: 8697050508967542788
+    - rid: 8697050622712348738
       type: {class: Component, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 647349ca-9ebb-4d5f-b81e-500761ec1c5a
@@ -218,7 +220,7 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: alex_normal.png
-    - rid: 8697050508967542789
+    - rid: 8697050622712348739
       type: {class: Component, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 7fb5bc29-b329-43d1-8102-4c81983c2f28
@@ -227,7 +229,7 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: maya_smile.png
-    - rid: 8697050508967542790
+    - rid: 8697050622712348740
       type: {class: Component, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 894c2a71-952e-45c9-b55a-340794307a1d
@@ -238,19 +240,23 @@ MonoBehaviour:
           <containerType>k__BackingField: 1
           <containerId>k__BackingField: 894c2a71-952e-45c9-b55a-340794307a1d
           data_string: 
+          data_stringRichTextRaw: 
+          data_stringRichText: 
           data_componentList:
-          - rid: 8697050508967542791
-          - rid: 8697050508967542788
+          - rid: 8697050622712348741
+          - rid: 8697050622712348738
         - <Name>k__BackingField: description
           <Type>k__BackingField: 2
           <containerType>k__BackingField: 1
           <containerId>k__BackingField: 894c2a71-952e-45c9-b55a-340794307a1d
-          data_string: <p>This is the character's story</p>
+          data_string: 
+          data_stringRichTextRaw: <p>This is the character's story</p>
+          data_stringRichText: 
           data_componentList: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: jake_normal.png
-    - rid: 8697050508967542791
+    - rid: 8697050622712348741
       type: {class: Component, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: ad3d9699-c9ea-4bc0-aa9f-e9656ca0791c
@@ -259,7 +265,7 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: maya_normal.png
-    - rid: 8697050508967542792
+    - rid: 8697050622712348742
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: cb35db92-3c07-41bf-9c45-580ad6b891b4
@@ -270,20 +276,33 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: cyan
         <Components>k__BackingField:
-        - rid: 8697050508967542786
+        - rid: 8697050622712348736
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: classroom.png
+        <AudioAssets>k__BackingField:
+        - <mode>k__BackingField: 1
+          <id>k__BackingField: 44dca8f3-c4bd-4620-a3dc-df78ebc95113
+          <asset>k__BackingField: f489449a-b7ec-4a5a-b099-8badf2f51eea
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: ending.mp3
+        - <mode>k__BackingField: 2
+          <id>k__BackingField: 55a7b6f6-fcf2-45d5-ac13-b54769a823d9
+          <asset>k__BackingField: caa99cda-776d-4bc0-a80d-72f0326f648a
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: school.mp3
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 51077c30-3bc3-427a-b1a1-8d6be26dc197
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542792
+            rid: 8697050622712348742
           <Target>k__BackingField:
-            rid: 8697050508967542793
-    - rid: 8697050508967542793
+            rid: 8697050622712348743
+    - rid: 8697050622712348743
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: abb0f32e-b35f-4271-b631-5f0860fddd42
@@ -294,21 +313,22 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: cyan
         <Components>k__BackingField:
-        - rid: 8697050508967542791
-        - rid: 8697050508967542790
+        - rid: 8697050622712348741
+        - rid: 8697050622712348740
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: school.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 4ab6a842-4a58-4144-babb-fe76bee42ae0
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542793
+            rid: 8697050622712348743
           <Target>k__BackingField:
-            rid: 8697050508967542794
-    - rid: 8697050508967542794
+            rid: 8697050622712348744
+    - rid: 8697050622712348744
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 35533a31-2b6e-4cf2-9bf9-a904836fc398
@@ -320,20 +340,21 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: cyan
         <Components>k__BackingField:
-        - rid: 8697050508967542791
+        - rid: 8697050622712348741
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: school.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 7c41bd83-ae2c-4ff0-b06d-5293676935c3
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542794
+            rid: 8697050622712348744
           <Target>k__BackingField:
-            rid: 8697050508967542795
-    - rid: 8697050508967542795
+            rid: 8697050622712348745
+    - rid: 8697050622712348745
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 714a2e99-b0e7-4b7f-b4fd-7fcebc821e05
@@ -345,20 +366,21 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: cyan
         <Components>k__BackingField:
-        - rid: 8697050508967542790
+        - rid: 8697050622712348740
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: school.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: d1c1c0ad-fe9d-467b-aee5-d885fdb0a82c
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542795
+            rid: 8697050622712348745
           <Target>k__BackingField:
-            rid: 8697050508967542796
-    - rid: 8697050508967542796
+            rid: 8697050622712348746
+    - rid: 8697050622712348746
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 5d00bdb7-a34f-49e5-ad42-a7373f72f7f0
@@ -374,32 +396,33 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: school.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 520395c4-13c3-44ce-b9e2-edca4d8818c6
           <RawLabel>k__BackingField: <p>"The festival sounds exciting! Count me in,
             Maya."</p>
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542796
+            rid: 8697050622712348746
           <Target>k__BackingField:
-            rid: 8697050508967542797
+            rid: 8697050622712348747
         - <Id>k__BackingField: bb8a62f6-111f-445f-bb20-cd7d99407510
           <RawLabel>k__BackingField: <p>"Actually, Jake's idea sounds perfect after
             this week."</p>
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542796
+            rid: 8697050622712348746
           <Target>k__BackingField:
-            rid: 8697050508967542798
+            rid: 8697050622712348748
         - <Id>k__BackingField: 1ae4f4ff-af0c-4eec-8dbe-c4512de310de
           <RawLabel>k__BackingField: <p>"Why don't we compromise? Festival first,
             then movies?"</p>
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542796
+            rid: 8697050622712348746
           <Target>k__BackingField:
-            rid: 8697050508967542799
-    - rid: 8697050508967542797
+            rid: 8697050622712348749
+    - rid: 8697050622712348747
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 7886024f-0500-45ed-ba40-f917f91309ff
@@ -411,20 +434,33 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: purple
         <Components>k__BackingField:
-        - rid: 8697050508967542789
+        - rid: 8697050622712348739
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: festival.png
+        <AudioAssets>k__BackingField:
+        - <mode>k__BackingField: 1
+          <id>k__BackingField: 9d5a3553-ecf9-4463-938f-92a86670ae36
+          <asset>k__BackingField: caa99cda-776d-4bc0-a80d-72f0326f648a
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: school.mp3
+        - <mode>k__BackingField: 2
+          <id>k__BackingField: d8898202-51d6-431a-a9fc-081d963e977b
+          <asset>k__BackingField: 58b381d9-d28c-4c8a-8a38-a8bc42ff0e96
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: festival.mp3
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 59c12c7d-a290-4264-a9fe-086ff970b102
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542797
+            rid: 8697050622712348747
           <Target>k__BackingField:
-            rid: 8697050508967542800
-    - rid: 8697050508967542798
+            rid: 8697050622712348750
+    - rid: 8697050622712348748
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: aa7603c6-9af8-409b-90a2-3be46d2c0058
@@ -440,15 +476,28 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: home.png
+        <AudioAssets>k__BackingField:
+        - <mode>k__BackingField: 2
+          <id>k__BackingField: 511e2767-4601-4a65-a9b2-d8e9f83ef5f6
+          <asset>k__BackingField: 588547a5-1c12-41bb-9596-2712de1dcf24
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: home.mp3
+        - <mode>k__BackingField: 1
+          <id>k__BackingField: 546ab55f-89ec-4961-bac4-ebaa8be8b62e
+          <asset>k__BackingField: caa99cda-776d-4bc0-a80d-72f0326f648a
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: school.mp3
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 8c25dfcb-ba21-4509-93f7-8917927f14f7
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542798
+            rid: 8697050622712348748
           <Target>k__BackingField:
-            rid: 8697050508967542801
-    - rid: 8697050508967542799
+            rid: 8697050622712348751
+    - rid: 8697050622712348749
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 787b1285-f5d5-4d48-97af-c2a526d6c024
@@ -463,15 +512,28 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: festival.png
+        <AudioAssets>k__BackingField:
+        - <mode>k__BackingField: 2
+          <id>k__BackingField: 6644bfbf-9db5-4027-b9f8-73c23527b91f
+          <asset>k__BackingField: 588547a5-1c12-41bb-9596-2712de1dcf24
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: home.mp3
+        - <mode>k__BackingField: 1
+          <id>k__BackingField: 85a6d2b3-45bc-45ce-b5ae-6066677063ec
+          <asset>k__BackingField: caa99cda-776d-4bc0-a80d-72f0326f648a
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: school.mp3
         <Outputs>k__BackingField:
         - <Id>k__BackingField: dd137f1f-0fcc-439b-8c4b-ac39c092d529
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542799
+            rid: 8697050622712348749
           <Target>k__BackingField:
-            rid: 8697050508967542802
-    - rid: 8697050508967542800
+            rid: 8697050622712348752
+    - rid: 8697050622712348750
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 334bdef8-c6ae-464e-8c90-03bc5835cef9
@@ -482,20 +544,21 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: purple
         <Components>k__BackingField:
-        - rid: 8697050508967542791
+        - rid: 8697050622712348741
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: festival.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: b2a2f65d-99bf-4615-bdfa-3cda4ad3d599
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542800
+            rid: 8697050622712348750
           <Target>k__BackingField:
-            rid: 8697050508967542804
-    - rid: 8697050508967542801
+            rid: 8697050622712348754
+    - rid: 8697050622712348751
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 56d29f34-94f8-42fe-a71f-302938329f34
@@ -506,20 +569,21 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: orange
         <Components>k__BackingField:
-        - rid: 8697050508967542790
+        - rid: 8697050622712348740
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: home.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 25ca072d-3add-465c-a514-7e463775a0cd
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542801
+            rid: 8697050622712348751
           <Target>k__BackingField:
-            rid: 8697050508967542810
-    - rid: 8697050508967542802
+            rid: 8697050622712348760
+    - rid: 8697050622712348752
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 98ef227a-39b2-4aff-83f3-280aa85c9465
@@ -535,15 +599,16 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: home.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 29933839-35bd-49e2-b772-9fdd250729b2
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542802
+            rid: 8697050622712348752
           <Target>k__BackingField:
-            rid: 8697050508967542803
-    - rid: 8697050508967542803
+            rid: 8697050622712348753
+    - rid: 8697050622712348753
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: b39f2325-9701-4efb-afdb-c52fdb814b62
@@ -554,20 +619,21 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: blue
         <Components>k__BackingField:
-        - rid: 8697050508967542789
+        - rid: 8697050622712348739
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: home.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 0ff0c333-9e2b-4a95-a62d-72710ae660ac
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542803
+            rid: 8697050622712348753
           <Target>k__BackingField:
-            rid: 8697050508967542811
-    - rid: 8697050508967542804
+            rid: 8697050622712348761
+    - rid: 8697050622712348754
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 748f87cb-73cf-4c48-8b48-a91cae201546
@@ -582,22 +648,23 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: festival.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 325ea6e9-9ef6-4474-959a-8e3db56bcd7e
           <RawLabel>k__BackingField: <p>"You're absolutely right. Let's dance!"</p>
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542804
+            rid: 8697050622712348754
           <Target>k__BackingField:
-            rid: 8697050508967542805
+            rid: 8697050622712348755
         - <Id>k__BackingField: 8d832456-ba83-47c4-b9e1-70768a119077
           <RawLabel>k__BackingField: <p>"It's fun, but I'm getting pretty tired..."</p>
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542804
+            rid: 8697050622712348754
           <Target>k__BackingField:
-            rid: 8697050508967542806
-    - rid: 8697050508967542805
+            rid: 8697050622712348756
+    - rid: 8697050622712348755
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: e0f11e79-3b59-48a5-8414-9d17328a6d8d
@@ -613,15 +680,16 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: festival.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 2a903b36-d457-402d-a512-e8e3323c36bf
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542805
+            rid: 8697050622712348755
           <Target>k__BackingField:
-            rid: 8697050508967542813
-    - rid: 8697050508967542806
+            rid: 8697050622712348763
+    - rid: 8697050622712348756
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: d1f51111-4aaf-459b-8437-17be6ddef45c
@@ -636,15 +704,16 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: festival.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 879ab048-45ec-45d9-b586-9662d9c69207
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542806
+            rid: 8697050622712348756
           <Target>k__BackingField:
-            rid: 8697050508967542807
-    - rid: 8697050508967542807
+            rid: 8697050622712348757
+    - rid: 8697050622712348757
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: e5fa6346-0a28-43d7-98ad-fc7766f94c78
@@ -655,20 +724,21 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: purple
         <Components>k__BackingField:
-        - rid: 8697050508967542791
+        - rid: 8697050622712348741
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: festival.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: cd1d6393-3e08-4463-89d3-ed4d76b40280
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542807
+            rid: 8697050622712348757
           <Target>k__BackingField:
-            rid: 8697050508967542813
-    - rid: 8697050508967542808
+            rid: 8697050622712348763
+    - rid: 8697050622712348758
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 84acacdc-3ecf-4aeb-80f9-ed3f370cd765
@@ -684,15 +754,16 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: home.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 1376d465-54bd-4fda-adde-a9a2231aed33
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542808
+            rid: 8697050622712348758
           <Target>k__BackingField:
-            rid: 8697050508967542813
-    - rid: 8697050508967542809
+            rid: 8697050622712348763
+    - rid: 8697050622712348759
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 72e86a62-a245-42b3-92b8-5d0dec45ff5d
@@ -703,20 +774,21 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: orange
         <Components>k__BackingField:
-        - rid: 8697050508967542790
+        - rid: 8697050622712348740
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: home.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: e1e007c6-9aff-4d02-ba4d-f0665330407b
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542809
+            rid: 8697050622712348759
           <Target>k__BackingField:
-            rid: 8697050508967542813
-    - rid: 8697050508967542810
+            rid: 8697050622712348763
+    - rid: 8697050622712348760
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 8724f807-2aab-436d-b8c0-b1a81eba3321
@@ -733,22 +805,23 @@ MonoBehaviour:
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: home.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 28699c0d-c12a-43cd-b106-a0cdf953dd1d
           <RawLabel>k__BackingField: <p>"This is exactly what I needed. Thanks, Jake."</p>
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542810
+            rid: 8697050622712348760
           <Target>k__BackingField:
-            rid: 8697050508967542808
+            rid: 8697050622712348758
         - <Id>k__BackingField: 98d5ea37-573b-4ca2-8ce6-c586b6b48eda
           <RawLabel>k__BackingField: <p>"Next time, let's try something more adventurous?"</p>
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542810
+            rid: 8697050622712348760
           <Target>k__BackingField:
-            rid: 8697050508967542809
-    - rid: 8697050508967542811
+            rid: 8697050622712348759
+    - rid: 8697050622712348761
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 34a6a960-a808-4562-ad24-55a90a1d0e9b
@@ -758,20 +831,21 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: blue
         <Components>k__BackingField:
-        - rid: 8697050508967542790
+        - rid: 8697050622712348740
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: home.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: f62ad36b-c385-4455-8e90-2339c9d2ea5d
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542811
+            rid: 8697050622712348761
           <Target>k__BackingField:
-            rid: 8697050508967542812
-    - rid: 8697050508967542812
+            rid: 8697050622712348762
+    - rid: 8697050622712348762
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 8691d97d-1476-43c6-8ca1-b8daabe0ee09
@@ -784,21 +858,22 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: blue
         <Components>k__BackingField:
-        - rid: 8697050508967542787
-        - rid: 8697050508967542789
+        - rid: 8697050622712348737
+        - rid: 8697050622712348739
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: home.png
+        <AudioAssets>k__BackingField: []
         <Outputs>k__BackingField:
         - <Id>k__BackingField: 559939e2-76a5-43d1-a9bb-eb2e842c13ba
           <RawLabel>k__BackingField: 
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542812
+            rid: 8697050622712348762
           <Target>k__BackingField:
-            rid: 8697050508967542813
-    - rid: 8697050508967542813
+            rid: 8697050622712348763
+    - rid: 8697050622712348763
       type: {class: Element, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: b86e0913-7076-474c-98c3-39eaca433d90
@@ -809,23 +884,42 @@ MonoBehaviour:
         <RuntimeContent>k__BackingField: 
         <ColorTheme>k__BackingField: cyan
         <Components>k__BackingField:
-        - rid: 8697050508967542786
+        - rid: 8697050622712348736
         <Attributes>k__BackingField: []
         <cover>k__BackingField:
           <type>k__BackingField: 1
           <filePath>k__BackingField: sunset.png
+        <AudioAssets>k__BackingField:
+        - <mode>k__BackingField: 1
+          <id>k__BackingField: f0fed97f-7726-4196-ad25-422596d6b640
+          <asset>k__BackingField: 58b381d9-d28c-4c8a-8a38-a8bc42ff0e96
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: festival.mp3
+        - <mode>k__BackingField: 1
+          <id>k__BackingField: da4d2b24-3bb3-4b40-8a92-aede17177ccf
+          <asset>k__BackingField: 588547a5-1c12-41bb-9596-2712de1dcf24
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: home.mp3
+        - <mode>k__BackingField: 2
+          <id>k__BackingField: c5fb1173-ff34-4fcd-80a8-6999afa4a52d
+          <asset>k__BackingField: f489449a-b7ec-4a5a-b099-8badf2f51eea
+          <delay>k__BackingField: 0
+          <volume>k__BackingField: 1
+          <name>k__BackingField: ending.mp3
         <Outputs>k__BackingField:
         - <Id>k__BackingField: c4560a2e-1fed-478e-9935-6393902ce8e0
           <RawLabel>k__BackingField: <p>Replay</p>
           <RuntimeLabel>k__BackingField: 
           <Source>k__BackingField:
-            rid: 8697050508967542813
+            rid: 8697050622712348763
           <Target>k__BackingField:
-            rid: 8697050508967542814
-    - rid: 8697050508967542814
+            rid: 8697050622712348764
+    - rid: 8697050622712348764
       type: {class: Jumper, ns: Arcweave.Project, asm: Assembly-CSharp}
       data:
         <Id>k__BackingField: 2bcf278d-f6a2-4045-b14d-99893de059c0
         <Pos>k__BackingField: {x: 13760, y: 11200}
         <Target>k__BackingField:
-          rid: 8697050508967542792
+          rid: 8697050622712348742
