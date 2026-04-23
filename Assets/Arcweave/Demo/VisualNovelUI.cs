@@ -42,6 +42,10 @@ namespace Arcweave
         public float characterFadeTime = 0.3f;
         public Image transitionOverlay;
 
+        [Header("Optional Systems")]
+        public SaveMenuUI saveMenu;
+        public DialogueLogUI dialogueLog;
+
         private readonly List<RawImage> _characterSlots = new List<RawImage>();
         private readonly List<Button> _choiceButtons = new List<Button>();
         private float _lastContainerH = -1f;
@@ -56,23 +60,38 @@ namespace Arcweave
             choiceButtonTemplate.gameObject.SetActive(false);
             if (continueArrow != null) continueArrow.SetActive(false);
             if (dialoguePanelButton != null) dialoguePanelButton.onClick.AddListener(OnDialogueClick);
-            saveButton.onClick.AddListener(Save);
-            loadButton.onClick.AddListener(Load);
-            loadButton.gameObject.SetActive(PlayerPrefs.HasKey(ArcweavePlayer.SAVE_KEY + "_currentElement"));
+
+            if (saveMenu != null)
+            {
+                saveButton.onClick.AddListener(saveMenu.OpenForSave);
+                loadButton.onClick.AddListener(saveMenu.OpenForLoad);
+            }
+            else
+            {
+                // Fallback: single-slot quick save/load
+                saveButton.onClick.AddListener(() => player.SaveToSlot(0));
+                loadButton.onClick.AddListener(() => player.LoadFromSlot(0));
+                loadButton.gameObject.SetActive(ArcweavePlayer.HasAnySave());
+            }
 
             player.onElementEnter += OnElementEnter;
             player.onElementOptions += OnElementOptions;
             player.onWaitInputNext += OnWaitInputNext;
             player.onProjectFinish += OnProjectFinish;
+            player.onBeforeLoad += OnBeforeLoad;
         }
 
         void OnDisable()
         {
             if (dialoguePanelButton != null) dialoguePanelButton.onClick.RemoveListener(OnDialogueClick);
+            saveButton.onClick.RemoveAllListeners();
+            loadButton.onClick.RemoveAllListeners();
+
             player.onElementEnter -= OnElementEnter;
             player.onElementOptions -= OnElementOptions;
             player.onWaitInputNext -= OnWaitInputNext;
             player.onProjectFinish -= OnProjectFinish;
+            player.onBeforeLoad -= OnBeforeLoad;
         }
 
         void Update()
@@ -83,11 +102,7 @@ namespace Arcweave
 
         void OnDialogueClick()
         {
-            if (!_typewriterDone)
-            {
-                SkipTypewriter();
-                return;
-            }
+            if (!_typewriterDone) { SkipTypewriter(); return; }
             if (_pendingNextCallback == null) return;
             var cb = _pendingNextCallback;
             _pendingNextCallback = null;
@@ -115,27 +130,19 @@ namespace Arcweave
             dialogueText.ForceMeshUpdate();
             int total = dialogueText.textInfo.characterCount;
             float delay = charsPerSecond > 0f ? 1f / charsPerSecond : 0f;
-
             for (int i = 0; i < total; i++)
             {
                 dialogueText.maxVisibleCharacters = i + 1;
                 if (delay > 0f) yield return new WaitForSeconds(delay);
             }
-
             _typewriterCoroutine = null;
             FinishTypewriter();
         }
 
-        void Save()
-        {
-            player.Save();
-            loadButton.gameObject.SetActive(true);
-        }
-
-        void Load()
+        void OnBeforeLoad()
         {
             ClearChoiceButtons();
-            player.Load();
+            dialogueLog?.Clear();
         }
 
         //----------------------------------------------------------------------
@@ -174,11 +181,7 @@ namespace Arcweave
                 float slotW = Mathf.Min(containerH * aspect, maxSlotW);
                 float slotH = slotW / aspect;
                 var le = _characterSlots[i].GetComponent<LayoutElement>();
-                if (le != null)
-                {
-                    le.preferredWidth = slotW;
-                    le.preferredHeight = slotH;
-                }
+                if (le != null) { le.preferredWidth = slotW; le.preferredHeight = slotH; }
             }
         }
 
@@ -217,8 +220,6 @@ namespace Arcweave
         void UpdateCharacters(Element e)
         {
             var comps = e.Components;
-
-            // Build list of textures for components that have a cover image
             var textures = new List<Texture2D>();
             if (comps != null)
             {
@@ -229,15 +230,12 @@ namespace Arcweave
                 }
             }
 
-            // Grow pool
             while (_characterSlots.Count < textures.Count)
             {
                 var img = Instantiate(characterTemplate, charactersContainer);
                 img.gameObject.SetActive(true);
                 _characterSlots.Add(img);
             }
-
-            // Shrink pool — destroy excess slots
             while (_characterSlots.Count > textures.Count)
             {
                 var last = _characterSlots[_characterSlots.Count - 1];
@@ -252,7 +250,7 @@ namespace Arcweave
                 slot.texture = textures[i];
                 switch (characterFadeMode)
                 {
-                    case FadeMode.None:    SetAlpha(slot, 1f); break;
+                    case FadeMode.None:      SetAlpha(slot, 1f); break;
                     case FadeMode.FadeAlpha: FadeIn(slot, characterFadeTime); break;
                     case FadeMode.Overlay:
                         StartCoroutine(OverlayTransition(() => SetAlpha(slot, 1f), characterFadeTime));
@@ -260,7 +258,7 @@ namespace Arcweave
                 }
             }
 
-            _lastContainerH = -1f; // force RefreshCharacterLayout on next LateUpdate
+            _lastContainerH = -1f;
             RefreshCharacterLayout();
         }
 
@@ -276,18 +274,17 @@ namespace Arcweave
             _pendingNextCallback = null;
             if (continueArrow != null) continueArrow.SetActive(false);
 
+            string content = string.Empty;
             if (e.HasContent())
             {
                 e.RunContentScript();
-                dialogueText.text = e.RuntimeContent;
+                content = e.RuntimeContent;
             }
-            else
-            {
-                dialogueText.text = string.Empty;
-            }
-
+            dialogueText.text = content;
             SetAlpha(dialogueText, 1f);
             _typewriterCoroutine = StartCoroutine(TypewriterRoutine());
+
+            dialogueLog?.AddEntry(speaker, content);
         }
 
         //----------------------------------------------------------------------
@@ -307,7 +304,6 @@ namespace Arcweave
         void OnWaitInputNext(System.Action callback)
         {
             _pendingNextCallback = callback;
-            // Arrow shown only after typewriter finishes (FinishTypewriter checks this)
             if (_typewriterDone && continueArrow != null)
                 continueArrow.SetActive(true);
         }
@@ -323,15 +319,9 @@ namespace Arcweave
             _choiceButtons.Add(btn);
             btn.GetComponentInChildren<TextMeshProUGUI>().text = label;
             btn.gameObject.SetActive(true);
-
             var btnGraphic = btn.GetComponent<Graphic>();
             if (btnGraphic != null) FadeIn(btnGraphic, characterFadeTime);
-
-            btn.onClick.AddListener(() =>
-            {
-                ClearChoiceButtons();
-                onClick();
-            });
+            btn.onClick.AddListener(() => { dialogueLog?.AddChoice(label); ClearChoiceButtons(); onClick(); });
             return btn;
         }
 
@@ -363,9 +353,7 @@ namespace Arcweave
 
         static void SetAlpha(Graphic g, float a)
         {
-            var c = g.color;
-            c.a = a;
-            g.color = c;
+            var c = g.color; c.a = a; g.color = c;
         }
 
         IEnumerator OverlayTransition(System.Action swapContent, float totalDuration)
