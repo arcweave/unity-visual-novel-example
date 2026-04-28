@@ -3,7 +3,23 @@
     "allow": [
       "Bash(grep \"\\\\.cs$\")",
       "Bash(xargs grep *)",
-      "Bash(dir *)"
+      "Bash(dir *)",
+      "Bash(rm -f \"Scenes/ArcweaveDemoScene.unity\" \"Scenes/ArcweaveDemoScene.unity.meta\")",
+      "Bash(rmdir Editor)",
+      "Bash(rm -f Editor.meta)",
+      "Bash(mkdir -p Scripts/Editor Prefabs)",
+      "Bash(mv \"Arcweave/Demo/ArcweaveDemoScene.unity\" \"Arcweave/Demo/ArcweaveDemoScene.unity.meta\" Scenes/)",
+      "Bash(mv \"Arcweave/Demo/MainMenuScene.unity\" \"Arcweave/Demo/MainMenuScene.unity.meta\" Scenes/)",
+      "Bash(mv \"Arcweave/Demo/@ArcweavePlayerUI.prefab\" \"Arcweave/Demo/@ArcweavePlayerUI.prefab.meta\" Prefabs/)",
+      "Bash(mv Arcweave/Demo/__TRACKED_VAR__.cs Arcweave/Demo/__TRACKED_VAR__.cs.meta Scripts/)",
+      "Bash(mv \"𝒃𝒖𝒕𝒕𝒐𝒏𝒔\" Buttons)",
+      "Bash(mv \"𝒃𝒖𝒕𝒕𝒐𝒏𝒔.meta\" Buttons.meta)",
+      "Bash(mv \"𝒕𝒆𝒙𝒕𝒃𝒐𝒙\" Textbox)",
+      "Bash(mv \"𝒕𝒆𝒙𝒕𝒃𝒐𝒙.meta\" Textbox.meta)",
+      "Bash(mv \"../../Arcweave/Demo/icons8-sort-down-90.png\" \"../../Arcweave/Demo/icons8-sort-down-90.png.meta\" .)",
+      "Bash(rm -f Demo/project.json Demo/project.json.meta)",
+      "Bash(rmdir Demo)",
+      "Bash(rm -f Demo.meta)"
     ]
   }
 }
