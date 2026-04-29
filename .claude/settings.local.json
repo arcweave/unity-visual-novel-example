@@ -19,7 +19,8 @@
       "Bash(mv \"../../Arcweave/Demo/icons8-sort-down-90.png\" \"../../Arcweave/Demo/icons8-sort-down-90.png.meta\" .)",
       "Bash(rm -f Demo/project.json Demo/project.json.meta)",
       "Bash(rmdir Demo)",
-      "Bash(rm -f Demo.meta)"
+      "Bash(rm -f Demo.meta)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }

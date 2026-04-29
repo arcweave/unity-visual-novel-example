@@ -36,6 +36,8 @@ namespace Arcweave
         public Button saveButton;
         public Button loadButton;
         public Button backToMenuButton;
+        public Button muteButton;
+        public AudioManager audioManager;
         public string mainMenuSceneName = "MainMenuScene";
 
         [Header("Fade")]
@@ -80,6 +82,12 @@ namespace Arcweave
             if (backToMenuButton != null)
                 backToMenuButton.onClick.AddListener(() => SceneManager.LoadScene(mainMenuSceneName));
 
+            if (muteButton != null && audioManager != null)
+            {
+                muteButton.onClick.AddListener(OnMuteClick);
+                RefreshMuteButton();
+            }
+
             player.onElementEnter += OnElementEnter;
             player.onElementOptions += OnElementOptions;
             player.onWaitInputNext += OnWaitInputNext;
@@ -93,6 +101,7 @@ namespace Arcweave
             saveButton.onClick.RemoveAllListeners();
             loadButton.onClick.RemoveAllListeners();
             if (backToMenuButton != null) backToMenuButton.onClick.RemoveAllListeners();
+            if (muteButton != null) muteButton.onClick.RemoveAllListeners();
 
             player.onElementEnter -= OnElementEnter;
             player.onElementOptions -= OnElementOptions;
@@ -105,6 +114,18 @@ namespace Arcweave
         {
             if (_pendingNextCallback != null && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
                 OnDialogueClick();
+        }
+
+        void OnMuteClick()
+        {
+            audioManager.ToggleMute();
+            RefreshMuteButton();
+        }
+
+        void RefreshMuteButton()
+        {
+            var tmp = muteButton.GetComponentInChildren<TextMeshProUGUI>();
+            if (tmp != null) tmp.text = audioManager.IsMuted ? "♪ OFF" : "♪ ON";
         }
 
         void OnDialogueClick()

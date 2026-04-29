@@ -32,6 +32,8 @@ namespace Arcweave
         private readonly Dictionary<string, Coroutine> _fadeCoroutines = new();
 
         private bool _paused;
+        private bool _muted;
+        private float _savedVolume = 1f;
 
         // -------------------------------------------------------------------------
 
@@ -187,6 +189,22 @@ namespace Arcweave
             ApplyMasterVolume();
         }
 
+        /// <summary>Toggle audio mute. Remembers the previous volume and restores it on unmute.</summary>
+        public void ToggleMute()
+        {
+            if (_muted)
+            {
+                _muted = false;
+                SetMasterVolume(_savedVolume);
+            }
+            else
+            {
+                _savedVolume = masterVolume > 0f ? masterVolume : 1f;
+                _muted = true;
+                SetMasterVolume(0f);
+            }
+        }
+
         // -------------------------------------------------------------------------
 
         private void ApplyMasterVolume()
@@ -235,5 +253,6 @@ namespace Arcweave
         /// Read-only state exposed to the custom editor.
         public IReadOnlyDictionary<string, AudioSource> ActiveSources => _loopingSources;
         public bool IsPaused => _paused;
+        public bool IsMuted => _muted;
     }
 }
