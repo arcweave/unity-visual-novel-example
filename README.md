@@ -7,6 +7,12 @@ characters, dialogue, choices, save / load, dialogue history, and a main menu.
 
 > Built on Unity **2022.3 LTS** (URP / Built-in compatible — uses only UGUI).
 
+
+<img width="1271" height="708" alt="image" src="https://github.com/user-attachments/assets/2e587844-c55c-4848-9591-918360a54638" />
+
+
+You can preview the example project directly in your browser [on itch](https://arcweave.itch.io/arcweave-unity-visual-novel-example)
+
 ---
 
 ## Contents
@@ -240,7 +246,7 @@ multiplier you can wire to a settings slider. The **Mute** button calls
 
 ## Setting up your own story
 
-### 1 — Import your Arcweave project
+### 1. Import your Arcweave project
 
 Replace `Assets/Arcweave/project.json` with your export, then select
 `Assets/Arcweave/Arcweave Project Asset.asset` and click **Import** if it
@@ -249,12 +255,12 @@ doesn't refresh automatically.
 Alternatively use **Import from Web** in the asset Inspector with your
 Arcweave API key + project hash to pull the latest version without a manual export.
 
-### 2 — Add your assets to Resources
+### 2. Add your assets to Resources
 
 All images and audio referenced in Arcweave must exist in `Assets/Resources/`
 with the **exact same filename** (without extension). Case-sensitive.
 
-### 3 — Wire the scene
+### 3. Wire the scene
 
 1. Open `Assets/Scenes/VisualNovelScene.unity` (or create a new scene).
 2. Drag `Assets/Prefabs/@ArcweavePlayerUI.prefab` into the scene.
@@ -264,11 +270,11 @@ with the **exact same filename** (without extension). Case-sensitive.
 6. *(Optional)* Add `AudioManager` to any GameObject, assign `ArcweavePlayer` to its
    **Player** field, then wire it to `VisualNovelUI`'s **Audio Manager** and **Mute Button** fields.
 
-### 4 — Build Settings
+### 4. Build Settings
 
 Add both `MainMenuScene` and `VisualNovelScene` to **File → Build Settings → Scenes In Build**.
 
-### 5 — Adjust layout
+### 5. Adjust layout
 
 The `CharacterLayer` uses a `HorizontalLayoutGroup` — characters distribute
 automatically. Resize `DialoguePanel`, `CharacterLayer`, and `ChoicesPanel`
