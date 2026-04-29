@@ -110,7 +110,7 @@ ProjectMaker → Project (boards, elements, connections, variables)
 
 ## Visual conventions in Arcweave
 
-The template maps Arcweave structure to visuals with no custom plugin work — just follow these rules:
+The template maps Arcweave structure to visuals with no custom plugin work, just follow these rules:
 
 | In Arcweave                   | Renders as in Unity                                  |
 |-------------------------------|------------------------------------------------------|
@@ -137,8 +137,8 @@ Change a component's cover image between elements to switch character expression
 
 ### Character staging tips
 
-- **Remove a character from stage** — detach their component from the element.
-- **Change position** — reorder components in the element; leftmost component = leftmost sprite.
+- **Remove a character from stage**: detach their component from the element.
+- **Change position**: reorder components in the element; leftmost component = leftmost sprite.
 - A component with no cover image is silently skipped (no slot reserved).
 - Characters always distribute left-to-right; there is no explicit slot assignment.
 
@@ -312,19 +312,12 @@ freely in the Scene view using anchors; no code changes needed.
 
 ## Extending the template
 
-- **Settings menu** — wire a Slider's `OnValueChanged` to `AudioManager.SetMasterVolume`;
+- **Settings menu**: wire a Slider's `OnValueChanged` to `AudioManager.SetMasterVolume`;
   the Mute button already uses `ToggleMute()` and updates its own label.
-- **Auto-advance** — when `_typewriterDone` and `_pendingNextCallback != null` in
+- **Auto-advance**: when `_typewriterDone` and `_pendingNextCallback != null` in
   `VisualNovelUI`, start a coroutine that auto-clicks after N seconds.
-- **Skip read text** — `Element.Visits > 0` means it's been seen; speed up the typewriter.
-- **Localization** — Arcweave supports locales natively via `ArcweaveProjectAsset.locale`.
-- **Custom UI** — swap `VisualNovelUI` with your own MonoBehaviour that subscribes to
+- **Skip read text**: `Element.Visits > 0` means it's been seen; speed up the typewriter.
+- **Localization**: Arcweave supports locales natively via `ArcweaveProjectAsset.locale`.
+- **Custom UI**: swap `VisualNovelUI` with your own MonoBehaviour that subscribes to
   the same `ArcweavePlayer` events.
 
----
-
-## Credits
-
-- [Arcweave](https://arcweave.com) — narrative authoring tool & official Unity plugin
-- [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed) — UI font (SIL OFL)
-- Demo story, art, and music: bundled for example purposes
