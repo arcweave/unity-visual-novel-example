@@ -45,8 +45,12 @@ namespace Arcweave
         void OnLoad()
         {
             if (loadMenu != null) loadMenu.OpenForLoad();
-            else LoadSlotAndSwitchScene(ArcweavePlayer.MostRecentSlot());
+            else LoadSlotAndSwitchScene(ArcweavePlayer.MostRecentSlot()); // fallback
+
+            
         }
+
+        
 
         void LoadSlotAndSwitchScene(int slot)
         {
